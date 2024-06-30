@@ -21,7 +21,6 @@ function App() {
 
   const handleColor = () => {
     setColor(prevColor => {
-      console.log(prevColor);
       switch (prevColor) {
         case colorClasses.pink:
           return colorClasses.blue;
