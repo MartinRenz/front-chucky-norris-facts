@@ -1,13 +1,14 @@
 import { FunctionComponent } from 'react';
 
 interface ButtonProps {
-  theme?: string
+  title: string
+  onClick: () => void
 }
 
-const Button: FunctionComponent<ButtonProps> = () => {
+const Button: FunctionComponent<ButtonProps> = ({ title, onClick }) => {
   return (
-    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-      Button
+    <button className="bg-amber-950 text-white py-3 px-6 rounded" onClick={onClick}>
+      {title}
     </button>
   );
 }
